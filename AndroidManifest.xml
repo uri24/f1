@@ -26,6 +26,22 @@
             android:name="net.infobosccoma.f1.SeconActivity"
             android:label="@string/title_activity_secon" >
         </activity>
+        <activity
+            android:name="net.infobosccoma.f1.VideoActivity"
+            android:label="@string/title_activity_video"
+            android:parentActivityName="SeconActiviti" >
+>
+        </activity>
+        <activity
+            android:name="net.infobosccoma.f1.ImatgeActivity"
+            android:label="@string/title_activity_imatge"
+            android:parentActivityName="SeconActiviti" >
+        </activity>
+        <activity
+            android:name="net.infobosccoma.f1.VeuActivity"
+            android:label="@string/title_activity_veu" 
+            android:parentActivityName="SeconActiviti">
+        </activity>
     </application>
 
 </manifest>

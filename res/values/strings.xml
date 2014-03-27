@@ -8,5 +8,8 @@
     <string name="tcognom">Cognoms</string>
     <string name="bfoto">Fer una foto</string>
     <string name="title_activity_secon">SeconActivity</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="title_activity_imatge">ImatgeActivity</string>
+    <string name="title_activity_veu">VeuActivity</string>
 
 </resources>
