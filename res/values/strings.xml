@@ -7,5 +7,6 @@
     <string name="enom">Nom</string>
     <string name="tcognom">Cognoms</string>
     <string name="bfoto">Fer una foto</string>
+    <string name="title_activity_secon">SeconActivity</string>
 
 </resources>
