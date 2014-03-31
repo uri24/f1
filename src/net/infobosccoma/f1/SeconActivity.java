@@ -2,8 +2,11 @@ package net.infobosccoma.f1;
 
 
 
+
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -17,6 +20,14 @@ public class SeconActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_secon);
+		// posar musica
+		 MediaPlayer mediaPlayer;
+	        mediaPlayer = MediaPlayer.create(this, Uri.parse("canço.mp3"));
+	        mediaPlayer.setLooping(true);
+	        mediaPlayer.setVolume(100,100);
+	        mediaPlayer.start();
+	        
+	        
 		
 		  btvideo = (Button) findViewById(R.id.button1);
 	      btvideo.setOnClickListener(new OnClickListener() {
