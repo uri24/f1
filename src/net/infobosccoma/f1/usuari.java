@@ -4,13 +4,13 @@ import java.io.File;
 
 public class usuari {
 
-	private String nom, cognoms;
-	private File imatge;
+	private String nom, cognoms, imatge;
+	
 	
 	public usuari() {
 		}
 
-	public usuari(String nom, String cognoms, File imatge) {
+	public usuari(String nom, String cognoms, String imatge) {
 		this.nom = nom;
 		this.cognoms = cognoms;
 		this.imatge = imatge;
@@ -28,10 +28,10 @@ public class usuari {
 	public void setCognoms(String cognoms) {
 		this.cognoms = cognoms;
 	}
-	public File getImatge() {
+	public String getImatge() {
 		return imatge;
 	}
-	public void setImatge(File imatge) {
+	public void setImatge(String imatge) {
 		this.imatge = imatge;
 	}
 	@Override

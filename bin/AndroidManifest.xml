@@ -30,7 +30,6 @@
             android:name="net.infobosccoma.f1.VideoActivity"
             android:label="@string/title_activity_video"
             android:parentActivityName="SeconActiviti" >
->
         </activity>
         <activity
             android:name="net.infobosccoma.f1.ImatgeActivity"
