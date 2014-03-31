@@ -18,15 +18,14 @@
             android:id="@+id/tnom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/enom" />
+            android:text="@string/enom"
+            android:width="80dp" />
 
         <EditText
             android:id="@+id/enom"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -37,39 +36,49 @@
             android:id="@+id/tcognom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tcognom" />
+            android:text="@string/tcognom"
+            android:width="80dp" />
 
         <EditText
             android:id="@+id/ecognom"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10" />
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
         <Button
             android:id="@+id/bfoto"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/bfoto" />
 
+        <Button
+            android:id="@+id/bNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bNext" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
         <ImageView
             android:id="@+id/ifoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />
-
+            android:adjustViewBounds="true"
+            android:maxHeight="200dp"
+            android:maxWidth="200dp"
+            android:src="@drawable/perfil" />
     </LinearLayout>
-   
+
 </LinearLayout>

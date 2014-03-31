@@ -11,5 +11,5 @@
     <string name="title_activity_video">VideoActivity</string>
     <string name="title_activity_imatge">ImatgeActivity</string>
     <string name="title_activity_veu">VeuActivity</string>
-
+    <string name="bNext">Següent</string>
 </resources>
