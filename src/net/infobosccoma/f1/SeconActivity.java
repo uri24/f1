@@ -12,24 +12,26 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class SeconActivity extends Activity {
 
-	Button btvideo,btimatge,btveu;
+	ImageButton btvideo, btimatge,btveu;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_secon);
 		// posar musica
-		/* MediaPlayer mediaPlayer;
+		
+			MediaPlayer mediaPlayer;
 	        mediaPlayer = MediaPlayer.create(this, Uri.parse("canso.mp3"));
 	        mediaPlayer.setLooping(true);
 	        mediaPlayer.setVolume(100,100);
 	        mediaPlayer.start();
-	        */
+	        
 	        
 		
-		  btvideo = (Button) findViewById(R.id.button1);
+		  btvideo = (ImageButton) findViewById(R.id.btvideo);
 	      btvideo.setOnClickListener(new OnClickListener() {
 				
 				@Override
@@ -39,7 +41,7 @@ public class SeconActivity extends Activity {
 					startActivity(i);
 				}
 			});
-	      btimatge = (Button) findViewById(R.id.button2);
+	      btimatge = (ImageButton) findViewById(R.id.button2);
 	      btimatge.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -49,7 +51,7 @@ public class SeconActivity extends Activity {
 				startActivity(i);
 			}
 		});
-	      btveu =(Button) findViewById(R.id.button3);
+	      btveu =(ImageButton) findViewById(R.id.button3);
 	      btveu.setOnClickListener(new OnClickListener() {
 			
 			@Override
