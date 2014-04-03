@@ -1,31 +1,34 @@
 package net.infobosccoma.f1;
 
 import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.MediaController;
 import android.widget.VideoView;
+import android.widget.AdapterView.OnItemClickListener;
 
-public class VideoActivity extends Activity {
+public class VideoActivity extends ListActivity  implements OnItemClickListener{
 
-	private VideoView videoView;
-	private MediaController mediaController;
+
 	
+	String[] listItems = {"f1", "item 2 ", "list", "android", "item 3", "foobar", "bar", }; 
+   int[] ids ={R.raw.f1};
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_video);
-		
-		videoView = (VideoView) findViewById(R.id.vView);
-		mediaController = new MediaController(this);
-		videoView.setMediaController(mediaController);
+     public void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.list);
+         setListAdapter(new ArrayAdapter(this,  android.R.layout.simple_list_item_1, listItems));
+         
 
-		videoView.setVideoURI(Uri.parse("http://www.youtube.com/watch?v=2eSh7YDHXrU"));
-		videoView.start();
-		mediaController.show();
-		videoView.requestFocus();
+		
+		
 	}
 
 	@Override
@@ -39,5 +42,16 @@ public class VideoActivity extends Activity {
 	@Override
 	public void onConfigurationChanged(Configuration novaconfig) {
 		super.onConfigurationChanged(novaconfig);
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int posicio, long arg3) {
+		// TODO Auto-generated method stub
+		Intent i = new Intent(VideoActivity.this, Reproduir_video.class);
+		Bundle b = new Bundle();
+		b.putSerializable("video", ids[posicio]);
+		i.putExtras(b);
+		startActivity(i);
+		
 	}
 }

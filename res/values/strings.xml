@@ -12,6 +12,7 @@
     <string name="title_activity_imatge">ImatgeActivity</string>
     <string name="title_activity_veu">VeuActivity</string>
     <string name="bNext">Següent</string>
+
     <string-array name="escuderias">
         <item>Caterham</item>
         <item>Ferrari</item>
@@ -54,5 +55,10 @@
         <item>Felipe Massa</item>
         <item>Valtteri Bottas</item>
     </string-array>
-        <string name="Desc">Cotxe de l\'escuderia</string>
+
+    <string name="toglebton"></string>
+    <string name="toglebtof"></string>
+    <string name="Desc">Cotxe de l\'escuderia</string>
+    <string name="title_activity_reproduir_video">Reproduir_video</string>
+
 </resources>

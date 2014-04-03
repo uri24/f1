@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondu"
     android:orientation="vertical"
-    tools:context=".SeconActivity"
-    android:background="@android:color/black" >
+    tools:context=".SeconActivity" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,6 @@
             android:id="@+id/ivUsuari"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -58,10 +57,9 @@
                 android:layout_marginRight="40dp"
                 android:layout_marginTop="40dp"
                 android:layout_weight="1"
+                android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:src="@drawable/imatge"
-                 android:background="@android:color/transparent" />
-
+                android:src="@drawable/imatge" />
         </LinearLayout>
 
         <LinearLayout
@@ -69,8 +67,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1" >
 
-            <ImageButton
-                android:id="@+id/btGrabar"
+            <ToggleButton
+                android:id="@+id/btmicro"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="40dp"
@@ -78,11 +76,12 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
+                android:background="@drawable/cambiar_img"
                 android:scaleType="fitCenter"
-                android:src="@drawable/micro"
-                android:background="@android:color/transparent" />
+                android:textOff="@string/toglebtof"
+                android:textOn="@string/toglebton" />
 
-            <ImageButton
+            <ToggleButton
                 android:id="@+id/btPlay"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -91,10 +90,10 @@
                 android:layout_marginRight="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
+                android:background="@drawable/play_xml"
                 android:scaleType="fitCenter"
-                android:src="@drawable/play"
-                android:background="@android:color/transparent" />
-
+                android:textOff="@string/toglebtof"
+                android:textOn="@string/toglebton" />
         </LinearLayout>
     </LinearLayout>
 
@@ -104,9 +103,10 @@
 
         <RatingBar
             android:id="@+id/ratingBar1"
-            android:numStars="5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom" />
+            android:layout_gravity="bottom"
+            android:numStars="5" />
     </LinearLayout>
+
 </LinearLayout>
