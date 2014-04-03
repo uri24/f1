@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="net.infobosccoma.f1.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,22 +25,26 @@
         </activity>
         <activity
             android:name="net.infobosccoma.f1.SeconActivity"
-            android:label="@string/title_activity_secon" >
+            android:label="@string/title_activity_secon"
+            android:configChanges="orientation|screenSize" >
         </activity>
         <activity
             android:name="net.infobosccoma.f1.VideoActivity"
             android:label="@string/title_activity_video"
-            android:parentActivityName="SeconActiviti" >
+            android:parentActivityName="SeconActiviti"
+            android:configChanges="orientation|screenSize" >
         </activity>
         <activity
             android:name="net.infobosccoma.f1.ImatgeActivity"
             android:label="@string/title_activity_imatge"
-            android:parentActivityName="SeconActiviti" >
+            android:parentActivityName="SeconActiviti"
+            android:configChanges="orientation|screenSize" >
         </activity>
         <activity
             android:name="net.infobosccoma.f1.VeuActivity"
             android:label="@string/title_activity_veu" 
-            android:parentActivityName="SeconActiviti">
+            android:parentActivityName="SeconActiviti"
+            android:configChanges="orientation|screenSize">
         </activity>
     </application>
 

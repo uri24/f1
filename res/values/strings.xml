@@ -12,4 +12,47 @@
     <string name="title_activity_imatge">ImatgeActivity</string>
     <string name="title_activity_veu">VeuActivity</string>
     <string name="bNext">Següent</string>
+    <string-array name="escuderias">
+        <item>Caterham</item>
+        <item>Ferrari</item>
+        <item>Force India</item>
+        <item>Lotus</item>
+        <item>Marussia</item>
+        <item>McLaren</item>
+        <item>Mercedes</item>
+        <item>Red Bull</item>
+        <item>Sauber</item>
+        <item>Toro Rosso</item>
+        <item>Williams</item>
+    </string-array>
+    <string-array name="motores">
+        <item>Renault Energy F1 2014</item>
+        <item>Mercedes PU106A Hybrid</item>
+        <item>Ferrari 059/3</item>
+    </string-array>
+    <string-array name="pilots">
+        <item>Kamui Kobayashi</item>
+        <item>Marcus Ericsson</item>
+        <item>Fernando Alonso</item>
+        <item>Kimi Räikkönen</item>
+        <item>Sergio Pérez</item>
+        <item>Nico Hülkenberg</item>
+        <item>Romain Grosjean</item>
+        <item>Pastor Maldonado</item>
+        <item>Jules Bianchi</item>
+        <item>Max Chilton</item>
+        <item>Jenson Button</item>
+        <item>Kevin Magnussen</item>
+        <item>Nico Rosberg</item>
+        <item>Lewis Hamilton</item>
+        <item>Sebastian Vettel</item>
+        <item>Daniel Ricciardo</item>
+        <item>Adrian Sutil</item>
+        <item>Esteban Gutiérrez</item>
+        <item>Jean-Eric Vergne</item>
+        <item>Daniil Kvyat</item>
+        <item>Felipe Massa</item>
+        <item>Valtteri Bottas</item>
+    </string-array>
+        <string name="Desc">Cotxe de l\'escuderia</string>
 </resources>

@@ -1,23 +1,13 @@
 package net.infobosccoma.f1;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.BitmapFactory.Options;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.View;
@@ -47,6 +37,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	public void gui() {
 		imatge = (ImageView) findViewById(R.id.ifoto);
+
+		imatge.setImageBitmap(Utils.obtenirImatgeFromResource(getResources(), R.drawable.perfil, 250, 250));
 		bFoto = (Button) findViewById(R.id.bfoto);
 		bFoto.setOnClickListener(this);
 		bNext = (Button) findViewById(R.id.bNext);
@@ -66,11 +58,11 @@ public class MainActivity extends Activity implements OnClickListener {
 				usuari.setNom(nom.getText().toString());
 				usuari.setCognoms(cognom.getText().toString());
 
-				if (isIntentAvailable(this, MediaStore.ACTION_IMAGE_CAPTURE)) {
+				if (Utils.isIntentAvailable(this, MediaStore.ACTION_IMAGE_CAPTURE)) {
 					// intenció de fer una foto
 					Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 					// crear la ruta del fitxer on desar la foto
-					tempImageFile = crearFitxer();
+					tempImageFile = Utils.crearFitxer(usuari, this.getPackageName());
 					// li passem paràmetres a l'Inent per indicar que es vol
 					// guarda
 					// la captura en un fitxer
@@ -98,7 +90,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		default:
 			break;
 		}
-
 	}
 
 	@Override
@@ -107,78 +98,12 @@ public class MainActivity extends Activity implements OnClickListener {
 		if (requestCode == 0) {
 			if (resultCode == RESULT_OK) {
 				bNext.setVisibility(0);
-				// mostrar una miniatura del fitxer que ha desat l'app de
-				// captura
-				imatge.setImageBitmap(obtenirImatge(tempImageFile.getAbsolutePath(), 200, 200));
+				// mostrar una miniatura del fitxer que ha desat l'app de captura
+				imatge.setImageBitmap(Utils.obtenirImatgeFromSD(tempImageFile.getAbsolutePath(), 250, 250));
 				usuari.setImatge(tempImageFile.getName());
 				bFoto.setText("Fer una altra foto");
 			}
 		}
-	}
-
-
-	/**
-	 * Mètode que comprova si hi ha una aplicició per a captura de fotos
-	 * 
-	 * @param context
-	 * @param action
-	 * @return true si existeix, false en cas contrari
-	 */
-	public static boolean isIntentAvailable(Context context, String action) {
-		final PackageManager packageManager = context.getPackageManager();
-		final Intent intent = new Intent(action);
-		List<ResolveInfo> list = packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
-		return list.size() > 0;
-	}
-
-	/**
-	 * Crea la ruta absoluta per a un nou fitxer temporal
-	 * 
-	 * @return L'objecte File que representa el fitxer
-	 */
-	private File crearFitxer() {
-		String imageFileName;
-		if (usuari.getImatge() == null) {
-			// Create an image file name
-			String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-			imageFileName = usuari.getCognoms() + timeStamp + ".jpg";
-		} else {
-			imageFileName = usuari.getImatge();
-		}
-		File path = new File(Environment.getExternalStorageDirectory(),
-				this.getPackageName());
-		if (!path.exists())
-			path.mkdirs();
-
-		return new File(path, imageFileName);
-	}
-
-	public static Bitmap obtenirImatge(String path, int reqWidth, int reqHeight) {
-		// Primer, descodificar el bitmap amb inJustDecodeBounds=true per
-		// comprovar les dimensions
-		BitmapFactory.Options options = new BitmapFactory.Options();
-		options.inJustDecodeBounds = true;
-		BitmapFactory.decodeFile(path, options);
-		// Calcular inSampleSize
-		options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-		// Descodificar el bitmap amb el valor indicat de inSampleSize
-		options.inJustDecodeBounds = false;
-		return BitmapFactory.decodeFile(path, options);
-	}
-
-	private static int calculateInSampleSize(Options options, int reqWidth,
-			int reqHeight) {
-		// alçadai ampladade la imatge
-		int height = options.outHeight;
-		int width = options.outWidth;
-		int inSampleSize = 1;
-		int heightRatio, widthRatio;
-		if (height > reqHeight || width > reqWidth) {
-			heightRatio = Math.round((float) height / (float) reqHeight);
-			widthRatio = Math.round((float) width / (float) reqWidth);
-			inSampleSize = heightRatio < widthRatio ? heightRatio : widthRatio;
-		}
-		return inSampleSize;
 	}
 
 	// metode per no perdre les dades introduides
