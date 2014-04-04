@@ -22,8 +22,8 @@ public class Reproduir_video extends Activity {
         mediaController.setMediaPlayer(videoView);
 		videoView.setMediaController(mediaController);
 		
-		int posicio = (int) getIntent().getIntExtra("video",0);
-		Uri path = Uri.parse("android.resource://net.infobosccoma.f1/" + posicio);
+		
+		Uri path = Uri.parse("android.resource://net.infobosccoma.f1/" + getIntent().getIntExtra("video",0));
 		
 		videoView.setVideoURI(path);
 		videoView.start();

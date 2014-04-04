@@ -60,5 +60,6 @@
     <string name="toglebtof"></string>
     <string name="Desc">Cotxe de l\'escuderia</string>
     <string name="title_activity_reproduir_video">Reproduir_video</string>
+    <string name="bfoto1">Fer foto</string>
 
 </resources>

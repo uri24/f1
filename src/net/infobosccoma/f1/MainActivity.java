@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -37,7 +38,6 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	public void gui() {
 		imatge = (ImageView) findViewById(R.id.ifoto);
-
 		imatge.setImageBitmap(Utils.obtenirImatgeFromResource(getResources(), R.drawable.perfil, 250, 250));
 		bFoto = (Button) findViewById(R.id.bfoto);
 		bFoto.setOnClickListener(this);
@@ -101,7 +101,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				// mostrar una miniatura del fitxer que ha desat l'app de captura
 				imatge.setImageBitmap(Utils.obtenirImatgeFromSD(tempImageFile.getAbsolutePath(), 250, 250));
 				usuari.setImatge(tempImageFile.getName());
-				bFoto.setText("Fer una altra foto");
+				
 			}
 		}
 	}

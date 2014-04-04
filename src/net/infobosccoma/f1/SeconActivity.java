@@ -62,7 +62,7 @@ public class SeconActivity extends Activity implements OnClickListener {
 		iUsuari = (ImageView)findViewById(R.id.ivUsuari);
 		
 		String path = Environment.getExternalStorageDirectory() + "/" + this.getPackageName() + "/" + usuari.getImatge();
-		iUsuari.setImageBitmap(Utils.obtenirImatgeFromSD(path, 20, 20));
+		iUsuari.setImageBitmap(Utils.obtenirImatgeFromSD(path, 40, 40));
 
 		mediaPlayer = new MediaPlayer();
 

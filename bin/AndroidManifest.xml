@@ -53,6 +53,8 @@
         </activity>
         <activity
             android:name="net.infobosccoma.f1.Reproduir_video"
+          android:parentActivityName="VideoActivity" 
+          android:screenOrientation="landscape"
             android:label="@string/title_activity_reproduir_video" >
         </activity>
     </application>
