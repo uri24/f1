@@ -55,6 +55,7 @@
             android:name="net.infobosccoma.f1.Reproduir_video"
           android:parentActivityName="VideoActivity" 
           android:screenOrientation="landscape"
+          android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:label="@string/title_activity_reproduir_video" >
         </activity>
     </application>
