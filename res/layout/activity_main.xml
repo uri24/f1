@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/enom"
+            android:gravity="center_horizontal"
             android:background="@layout/fondu_text_xml"
             android:width="80dp" />
 
@@ -28,6 +29,7 @@
             android:layout_marginLeft="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
              android:background="@layout/fondu_text_xml"
             android:ems="10" />
     </LinearLayout>
@@ -41,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tcognom"
+            android:gravity="center_horizontal"
              android:background="@layout/fondu_text_xml"
             android:width="80dp" />
 
@@ -49,6 +52,7 @@
             android:layout_marginLeft="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
               android:background="@layout/fondu_text_xml"
             android:ems="10" />
     </LinearLayout>
