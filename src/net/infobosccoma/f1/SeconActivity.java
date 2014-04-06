@@ -180,11 +180,12 @@ public class SeconActivity extends Activity implements OnClickListener {
 			onPlay = btplay.isChecked();
 			
 			if (onPlay){
-				
+				mediaPlayer.pause();
 				startPlaying();
 				
 			}else{
 				stopPlaying();
+				mediaPlayer.start();
 			}
 			
 			break;
