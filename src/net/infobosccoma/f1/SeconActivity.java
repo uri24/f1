@@ -208,6 +208,7 @@ public class SeconActivity extends Activity implements OnClickListener {
 			@Override
 			public void onCompletion(MediaPlayer mp) {
 				btplay.setChecked(false);
+				mediaPlayer.start();
 			}
 		});
 		try {
