@@ -127,11 +127,10 @@ public class SeconActivity extends Activity implements OnClickListener {
 
 		try {
 			mRecorder.prepare();
+			mRecorder.start();
 		} catch (IOException e) {
 			Log.e(LOG_TAG, "prepare() failed");
 		}
-
-		mRecorder.start();
 	}
 	
 	private void stopRecording() {
