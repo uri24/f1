@@ -19,6 +19,8 @@ public class VideoActivity extends ListActivity implements OnItemClickListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		setTitle("Videos");
 		setContentView(R.layout.list);
 		setListAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems));
 		ListView lista = (ListView) findViewById(android.R.id.list);
