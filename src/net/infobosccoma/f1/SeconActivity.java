@@ -167,9 +167,11 @@ public class SeconActivity extends Activity implements OnClickListener {
 
 			if (onMicro) {
 				mediaPlayer.pause();
+				btplay.setEnabled(false);
 				startRecording();
 			} else {
 				stopRecording();
+				btplay.setEnabled(true);
 				mediaPlayer.start();
 			}
 
